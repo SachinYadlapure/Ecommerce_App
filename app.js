@@ -46,10 +46,10 @@ app.use("/api/v1", payment);
 //middleware for error
 app.use(errorMiddleware);
 
-module.exports = app;
-
 app.get("/", (req, res) => {
   res.send(
     `<h1>Site is Working, Click <a href=${process.env.FRONTEND_URL} >here</a>to visit frontend App...</h1>`
   );
 });
+
+module.exports = app;
